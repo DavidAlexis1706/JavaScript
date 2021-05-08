@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Funciones arrow</title>
+</head>
+<body>
+    <h1>Arrow</h1>
+    <script>
+        setInterval(function(){
+        console.log('hi world');
+        }, 100);
+
+        setInterval(() => {
+        console.log('hi world');
+        }, 100);
+
+        var vowels = ['a', 'e', 'i', 'o', 'u'];
+        vowels.forEach(function(value){
+        console.log('vowel :' + value);
+        });
+        var vowels = ['a', 'e', 'i', 'o', 'u'];
+        vowels.forEach(value => {
+        console.log('vowel :' + value);
+        });
+        var sum = function(a, b){
+        return a+b;
+        }
+    </script>
+</body>
+</html>

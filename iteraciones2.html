@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        let array = ['x', 'y', 'z'];
+
+        for(let key of array.keys()){
+        console.log(key);
+        }
+        for(let [key, val] of array.entries()){
+            console.log(val, key);
+        }
+        var values = array.values();
+        while(true){
+            let item = values.next();
+            if(item.done)
+            break;
+            console.log(item.value);
+        }
+    </Script>
+    
+</body>
+</html>

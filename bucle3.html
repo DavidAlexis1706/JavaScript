@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><body>
+<p id="central"></p>
+    <script>
+        let i, j;
+        let x = "<table>";
+        for (i = 1; i <= 10; i++) // 10 filas
+        {
+            x= x + "<tr>";
+        for (j = 1; j <= i; j++) // números en cada fila
+            x= x + `<td> El numero es ${i} </td>`;
+            x = x + "</tr>";
+        }
+        x = x + "</table>";
+        document.getElementById("central").innerHTML= x;
+    </script>
+</body>
+</html>

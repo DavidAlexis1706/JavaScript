@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Dibujando en canvas</title>
+</head>
+<body>
+    <h1>Ejemplo canvas</h1>
+    <canvas width="320" height="160" style="border: 1px solid #000000"></canvas>
+    <script>
+        var Lienzo = document.querySelector("canvas");
+        var context = Lienzo.getContext("2d");
+        context.fillStyle = "cyan";
+        context.fillRect(20, 20, 100, 50);
+        var stk = document.querySelector("canvas").getContext("2d");
+        stk.strokeStyle = "red";
+        stk.strokeRect(135, 20, 50, 50);
+        stk.lineWidth = 5;
+        stk.strokeRect(205, 20, 50, 50);
+
+    </script>
+</body>
+</html>

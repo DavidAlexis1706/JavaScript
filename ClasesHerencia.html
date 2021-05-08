@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clases y Herencia</title>
+</head>
+<body>
+    <script>
+        // ES5
+        function Document(title, author, isPublished) {
+            this.title = title;
+            this.author = author;
+            this.isPublished = isPublished;
+            }
+            Document.prototype.publish = function publish() {
+            this.isPublished = true;
+        };
+        function Book(title, author, topic) {
+            Document.call(this, title, author, true);
+            this.topic = topic;
+        }
+        Book.prototype = Object.create(Document.prototype);
+
+        // ES6
+        class Document {
+                constructor(title, author, isPublished) {
+                this.title = title;
+                this.author = author;
+                this.isPublished = isPublished;
+            }
+            publish(){
+                this.isPublished = true;
+            }
+        }
+        class Book extends Document{
+                constructor(title, author, topic){
+                super(title, author, true);
+                this.topic = topic;
+            }
+        }
+    </script>
+</body>
+</html>

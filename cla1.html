@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"/>
+    <title>Modules - CommonJS</title>
+<!-- Teoria:
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Classes -->
+    <script>
+        function ficha() {
+            let alumno = {
+                    nombre: "Caterina",
+                    edad: 18
+                };
+                this.verNombre = function ()
+                {
+                    return alumno.nombre;
+                }
+                this.verEdad = function ()
+                {
+                var resultado = alumno.edad;
+                return resultado;
+                }
+        }
+        function programa() {
+            let obj = new ficha();
+            document.writeln(`El nombre es ${obj.verNombre()} <br>`);
+            document.writeln(`La edad es ${obj.verEdad()} <br>`);
+        }
+    </script>
+</head>
+<body>
+    <h3>Clase ficha </h3>
+    <input type="button" value="Pulsa aquí" onclick="programa()" />
+</body>
+</html>

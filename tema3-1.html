@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JavaScript</title>
+    <script src="javaScript/unidad3.js"></script>
+
+  </head>
+  <body>
+     <input type="button" 
+     value="Hazme click please"
+     id="btnMensaje"
+     onclick="mensaje();"
+     />
+     <br>
+     <input type="button" 
+     value="Cambiar Texto"
+     onclick="cambiarTexto();"
+     />
+
+     <div>
+       <form>
+         <label for="datos">Escriba un dato:</label>
+         <input type="text" id="datos"/>
+         <input type="button" id="agregar" 
+            value="Agregar a la lista"
+            onclick="agregarElementos();"
+          />
+         <br>
+         <select id="lista">
+            <!--<option value="1">Elemento 1</option> -->
+
+         </select>
+         <br>
+         <input type="button" value="Listar estudiantes" 
+         onclick="loadData();"/>
+
+         <select id="estudiantes">
+   
+       </select>
+       </form>
+     </div>
+     <div>
+       <input type="text" id="txtX" placeholder="introduzca un valor">
+       <input type="button" onclick="" value="parametro por default">
+     </div>
+  </body>
+</html>

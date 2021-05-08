@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parámetros</title>
+</head>
+<body>
+    <h1>Parámetros</h1>
+    <script>
+        // PARÁMETROS POR DEFECTO
+        function greet(name, gender = 'Mr.', greeting = 'Hello ' +
+            gender){
+            console.log(greeting + ' ' + name);
+        };
+        greet('Peter'); 
+        greet('Alex', undefined, 'Whats up');
+
+        //PARÁMETROS RESET
+        function printName(name){
+            var length = arguments.length;
+            var fullName = name;
+                if(length > 1){
+                for(var i=1; i< length; i++){
+                fullName += ' ' + arguments[i];
+                }
+            }
+            console.log(fullName);
+        };
+            printName('Felipe'); 
+            printName('Felipe', 'Juan', 'Froilan');
+
+        function printName(name, ...fancyNames){
+            var fullName = name;
+            fancyNames.forEach(fancyN => fullName += ' ' + fancyN);
+            console.log(fullName);
+        };
+        printName('Felipe');
+        printName('Felipe', 'Juan', 'Froilan');
+    </script>
+</body>
+</html>

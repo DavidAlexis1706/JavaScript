@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head><script type="text/javascript">
+    function inic(){
+        var DI = document.game.dinero.value = 100;
+    }
+    function calc(){
+        var Din = parseInt(document.game.dinero.value);
+        var Num = document.game.num.value;
+        var Apu = parseInt(document.game.apuesta.value);
+        var dado = Math.floor(Math.random() * 7);
+        var ganancia = 0;
+        if (Din > 0)
+        {
+        if (Num == dado)
+        {
+            document.game.dado.value = dado;
+            document.game.res.value = ("Has ganado! " + Apu*2);
+            ganancia = (Din+Apu*2);
+            document.game.dinero.value = ganancia;
+        }
+        else{
+            document.game.dado.value = dado;
+            document.game.res.value = ("Has perdido!" + Apu);
+            ganancia = (Din-Apu);
+            document.game.dinero.value = ganancia;
+        }
+        }
+        else{
+            window.alert("Has perdido todo tu dinero!");
+        }
+    }
+</script>
+</head>
+<body>
+    <h1 align="center">JUEGO APUESTAS</h1>
+    <form name="game">
+        <div align="center">
+        Dinero: <input type="text" name="dinero" size="5"> &nbsp;&nbsp;
+        Numero del dado: <input type="label" name="dado" size="5">
+        <br><br>
+        Introduzca un numero del 1 al 6: <input type="text" name="num" size="5">
+        <br><br>
+        Introduzca su apuesta: <input type="text" name="apuesta" size="5">
+        <br><br>
+        <input type="button" name="play" value="Jugar" onClick="calc()">
+        <input type="button" name="Start" value="Start" onClick="inic()">
+        <br><br>
+        <input type="label" name="res" size="15">
+        </div>
+    </form>
+</body>
+</html>

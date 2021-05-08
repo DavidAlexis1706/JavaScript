@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    function ProcesaDatos() {
+        let objx = document.getElementById("RangoValor").value;
+        document.getElementById("resultado").innerHTML = objx;
+    }
+</script>
+</head>
+<body>
+    <h3>Entrada de datos por 'Slide'</h3>
+    <input type="range" id="RangoValor" value="50" onchange="ProcesaDatos()">
+    <p id="resultado"></p>
+</body>
+</html>

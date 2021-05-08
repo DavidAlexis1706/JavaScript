@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Módulos</title>
+</head>
+<body>
+    <script>
+        // operador de propagacion ES5
+        function f(x, y, z) { }
+        var args = [0, 1, 2];
+        f.apply(null, args);
+
+        // ES6
+        function f(x, y, z) { }
+        var args = [0, 1, 2];
+        f(...args);
+        
+    </script>
+</body>
+</html>

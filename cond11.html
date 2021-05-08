@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        let origen,destino,descuento =0;
+        origen = prompt("origen?", "0");
+        destino = prompt("destino?", "0");
+
+        if (origen=="palma")
+            if (destino =="barcelona")
+            {
+                descuento = 5;
+            }
+            if (destino =="madrid")
+            {
+                descuento = 10;
+            }
+            if (destino =="valencia")
+            {
+                descuento = 15;
+            }
+        document.write(`<h3>Su descuento es de ${descuento}% </h3> `);
+    </script>
+</head>
+</html>
